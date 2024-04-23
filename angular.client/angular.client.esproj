@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.271090-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\Angular.client\</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="src\app\name-editor\**" />
+    <TypeScriptConfiguration Remove="src\app\name-editor\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\app\file-upload\file-upload.module.ts" />
+    <None Remove="src\app\get.component.ts" />
+    <None Remove="src\app\get.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\log-output\" />
+  </ItemGroup>
+</Project>

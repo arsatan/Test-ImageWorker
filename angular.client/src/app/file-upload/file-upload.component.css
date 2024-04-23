@@ -1,0 +1,32 @@
+label {
+  font-weight: bold;
+  padding-bottom: .5rem;
+  padding-top: 1rem;
+  display: inline-block;
+}
+
+th, td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+}
+
+table {
+  margin: 0 auto;
+}
+
+/*.file-input {
+  display: none;
+}*/
+
+
+textarea.log {
+  width: 400px;
+  max-width: 500px;
+  height: 100px;
+}
+
+upload-btn {
+  max-width: 300px;
+  text-align: right;
+}

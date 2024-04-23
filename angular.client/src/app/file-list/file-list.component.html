@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <h3>Список файлов в БД (локальная SQLite)</h3>
+  <p *ngIf="!dataitems"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+  <table *ngIf="dataitems">
+    <thead>
+      <tr>
+        <!--<th>Guid</th>-->
+        <!--<th>Имя файла</th>-->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataitem of dataitems">
+        <!--<td>{{ dataitem.guId }}</td>-->
+        <td>{{ dataitem.fileName }}</td>
+        <td><file-download-button [fileName]="dataitem.fileName" (update)="update($event)"></file-download-button></td>
+        <td><file-delete-button [fileName]="dataitem.fileName" (update)="update($event)"></file-delete-button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

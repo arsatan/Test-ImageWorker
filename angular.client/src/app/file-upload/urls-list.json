@@ -1,0 +1,10 @@
+{
+  "UrlsList": [
+    {
+      "url": "/api/DataItems"
+    },
+    {
+      "url": "https://httpbin.org/post"
+    }
+  ]
+}

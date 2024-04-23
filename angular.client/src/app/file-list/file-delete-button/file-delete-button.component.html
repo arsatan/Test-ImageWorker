@@ -1,0 +1,10 @@
+<div>
+  <button (click)="onClick()">Удалить</button>
+  <section [ngSwitch]="status">
+    <p *ngSwitchCase="'processing'">⏳ Выполнение...</p>
+    <p *ngSwitchCase="'success'">✅ ОК!</p>
+    <p *ngSwitchCase="'fail'">❌ Ошибка!</p>
+    <!--<p *ngSwitchDefault>😶 Готов.</p>-->
+    <!--<textarea type="text" class="log" [(ngModel)]="logValue" name="log" readonly="readonly"></textarea>-->
+  </section>
+</div>

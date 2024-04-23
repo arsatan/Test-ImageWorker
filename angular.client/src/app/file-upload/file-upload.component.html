@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <h3>Загрузка файла в локальную БД и его отправка POST-запросом на <a href="https://httpbin.org/">httpbin.org</a></h3>
+  <input type="file" style="text-align:right" (change)="onChange($event)" #fileUpload />
+  <div *ngIf="file">
+    <section>
+      <table>
+        <tr>
+          <td style="color:darkblue">тип: {{file.type}},<br /> размер: {{file.size}} байт</td>
+        </tr>
+      </table>
+    </section>
+    <button (click)="onClick()">Загрузить файл в БД</button>
+    <section [ngSwitch]="status">
+      <p *ngSwitchCase="'processing'">⏳ Выполнение...</p>
+      <p *ngSwitchCase="'success'">✅ ОК!</p>
+      <p *ngSwitchCase="'fail'">❌ Ошибка!</p>
+      <p *ngSwitchDefault>😶 Ожидание выполнения.</p>
+      <textarea type="text" class="log" [(ngModel)]="logValue" name="log" readonly="readonly"></textarea>
+    </section>
+  </div>
+</body>
+</html>
