@@ -4,7 +4,7 @@
 <p>
 Запуск:<br>
   <ol>
-    <li>Перед запуском ImageWorker.sln зайдите в каталог angular.client и запустите npm-install.bat для восстановления npm-пакетов;</li>
+    <li>Перед запуском ImageWorker.sln, зайдите в каталог angular.client и запустите npm-install.bat для восстановления npm-пакетов;</li>
     <li>Запустите ImageWorker.sln (файл решения Visual Studio) из корневого каталога;</li>
     <li>Запустите отладку по F5.</li><br>
   Результат будет отображен в браузере.
